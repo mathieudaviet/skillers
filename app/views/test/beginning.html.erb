@@ -1,0 +1,56 @@
+<div class = "background2">
+    <div class="container-fluid">
+
+
+      <div class="navbar-header">
+        <img class= "col-xs-2 logo" src="/images/logo1.png" alt="logo Skiller">
+      </div>
+
+      <div>
+        <h1 class="centrer col-md-12 titre1"> Test <%= @company %></h1>
+      </div>
+
+      <hr> 
+
+      <%= form_tag "/beginningform", method: "post" do %>
+
+        <fieldset>
+
+          <div class="form-group">
+            <label class="col-md-offset-4 col-md-3 test_label" for="first_name">Prénom</label>  
+            <div class="col-md-offset-4 col-md-3">
+              <input id="first_name" name="first_name" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-offset-4 col-md-3 test_label" for="last_name">Nom de famille</label>  
+            <div class="col-md-offset-4 col-md-3">
+              <input id="last_name" name="last_name" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-md-offset-4 col-md-3 test_label" for="email">Adresse email</label>  
+            <div class="col-md-offset-4 col-md-3">
+              <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
+
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-md-offset-4 col-md-3">
+              <button type="submit" class="btn-start-test btn btn-default">Voir les consignes<img class= "fleche" src="/images/fleche.png" alt="fleche"></button>
+            </div>
+          </div>
+
+        </fieldset>
+   <% end %>
+
+        </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2017 Skills</p>
+    </footer>

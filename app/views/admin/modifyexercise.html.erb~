@@ -1,0 +1,11 @@
+<%= form_tag "/modifyexercise", method: "post" do %>
+  <label for="statement"><%= @statement %></label>
+  <%= text_area_tag(:statement,@statement ,rows: 20, cols:50) %>
+  <label for="function"><%= @function %></label>
+  <%= text_area_tag(:function, @function,rows: 20) %>
+  <label for="language"><%= @language %></label>
+  <%= text_area_tag(:language, @language,rows: 20) %>
+  <label for="id">id <%= @id %></label>
+  <%= text_area_tag(:id, @id,rows: 20) %>
+  <input type="submit" value="Modifier cet exercice" />
+<% end %>

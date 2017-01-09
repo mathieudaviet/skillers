@@ -1,0 +1,45 @@
+<div class = "background2">
+    <div class="container-fluid">
+
+
+      <div class="navbar-header">
+        <img class= "col-xs-2 logo" src="/images/logo1.png" alt="logo Skiller">
+      </div>
+
+      <div>
+        <h1 class="centrer col-md-12 titre1"> Test <%= @company %></h1>
+      </div>
+
+      <hr> 
+
+      <div class = "jumbotron jumbotron3 col-md-offset-3 col-md-6">
+
+        <h2>Consignes:</h2>
+        <ul>
+         <li>Ce test est divisé en <%= @nb_exercises %> parties:</li>
+         <ul>
+           <%  @language_name.each do |name| %>
+           <li>Un test <%= name %></li>
+           <% end %>
+         </ul>
+         <li>Durée approximative: 30 minutes.</li>
+         <li>Il n'y a pas de limite de temps.</li>
+         <li>Il est préférable d'effectuer ce test sur un ordinateur.</li>
+         <li>Vous devez répondre à toutes les questions pour soumettre vos résultats.</li>
+         <li>Le test doit être réalisé en une seule fois. Vous ne pourrez pas enregistrer et terminer plus tard.</li>
+         <li>Pour évaluer le test, seront pris en compte: la qualité de vos réponses ainsi que votre rapidité.</li>
+       </ul>
+
+     </div>
+
+     <div class="col-md-offset-4 col-md-3">
+     <%= form_tag "/instructions", method: "post" do %>
+      <button type="submit" class="btn-start-test btn btn-default">Démarrer le test <img class= "fleche" src="/images/fleche.png" alt="fleche"></button>
+     <% end %>
+    </div>
+
+      </div>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2017 Skills</p>
+  </footer>

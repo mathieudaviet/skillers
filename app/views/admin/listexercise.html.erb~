@@ -1,0 +1,23 @@
+<table class="table table-bordered table-striped table-condensed">
+   <caption>
+      <h4>Liste des exo</h4>
+   </caption>
+   <thead>
+      <tr>
+            <th>ID</th>
+            <th>Statement</th>
+            <th>Function</th>
+            <th>Language</th>
+      </tr>
+   </thead>
+   <tbody>
+          <% @all.each do |exercise| %>
+          <tr>
+            <td><%= exercise.id %></td>
+            <td><%= exercise.statement.html_safe %></td>
+            <td><%= exercise.function %></td>
+            <td><%= exercise.language_id %></td>
+          </tr>
+          <% end %>
+    </tbody>
+</table>

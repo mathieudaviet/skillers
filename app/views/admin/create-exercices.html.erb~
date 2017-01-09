@@ -1,0 +1,7 @@
+<form action="/create-exercise" method="post">
+  <input type="text" name="statement" />
+  <input type="text" name="function" />
+  <input type="text" name="language" />
+  <input type="submit" value="Ajouter le livre" />
+</form>
+

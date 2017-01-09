@@ -1,0 +1,10 @@
+<%= form_tag "/exercices", method: "post" do %>
+  <label for="statement">Statement</label>
+  <input type="text" name="statement"/>
+  <label for="function">Function</label>
+  <input type="text" name="function" />
+  <label for="language">Language</label>
+  <input type="text" name="language" />
+  <input type="submit" value="Ajouter cet exercice" />
+<% end %>
+

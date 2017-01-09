@@ -1,0 +1,50 @@
+<div class = "background2">
+    <div class="container-fluid">
+
+
+      <div class="navbar-header">
+        <img class= "col-xs-2 logo" src="/images/logo1.png" alt="logo Skiller">
+      </div>
+
+      <div>
+        <h1 class="centrer col-md-12 titre1"> Test <%= @company%>(<%= @question%>/<%= @size%>)</h1>
+      </div>
+
+      <hr> 
+
+      <div class = "col-xs-12 part1">
+
+        <div class= "jumbotron jumbotron2 col-xs-6">
+          <h3>Enoncé:</h3>
+          <div class = "ennonce">
+         <%= @statement.html_safe%>
+       </div>
+       </div>
+	
+	<div class= "col-xs-6 mirror">
+	 <%= form_tag "/exercise", method: "post" do %>
+         <%= text_area_tag(:result, @function.html_safe, rows: 20) %>
+     <div class="col-md-offset-4 col-md-8 col-sm-12">
+      <button type="submit" class="btn-start-test btn btn-default colle">Question suivante<img class= "fleche" src="/images/fleche.png" alt="fleche"></button>
+    </div>
+     <% end %>
+	</div>
+     </div>
+</div>
+  </div>
+  <footer>
+    <p>Copyright &copy; 2017 Skills</p>
+  </footer>
+  </div>
+
+<script>
+
+CodeMirror.fromTextArea(document.getElementById("result"), {
+  mode: "<%= @codemirror%>",
+  theme: "3024-night",
+  lineNumbers: true
+});
+</script>
+
+
+
